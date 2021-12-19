@@ -212,8 +212,21 @@ main button.btn:hover {
     background-position: right;
     height: 100vh;
     width: 100%;
-
 }
+
+.blog .blog-post {
+    padding: 6rem;
+}
+
+.container .blog-post .blog-content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 80%;
+    margin: 3rem 2rem;
+    box-shadow: 0 15px 20px rgba(0,0,0,0);
+}
+
 
 
 /*   Viewport less then or equal to 750px  */
