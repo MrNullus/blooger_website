@@ -1,0 +1,231 @@
+/*
+================
+    Fonts
+================
+*/
+@import url('fonts.css');
+
+
+/*
+================
+   Variables
+================
+*/
+:root {
+    /* Theme colors */
+    --text-gray: #3f4954;
+    --text-light: #686666da;
+    --bg-color: #0f0f0f;
+    --white: #fff;
+    ----midnight: #104f55;
+
+    /* Gradient color */
+    --sky: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+
+    /*  Theme font-family  */
+    --Abel: 'Abel', cursive;
+    --Anton: 'Anton', cursive;
+    --Josefin: 'Josefin', cursive;
+    --Lexend: 'Lexend', cursive;
+    --Livvic: 'Livvic', cursive;
+}
+
+
+/*
+================
+    Globals
+================
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+h1 {
+    font-family: var(--Lexend);
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-family: var(--Lexend);
+}
+
+h3 {
+    font-family: var(--Abel);
+    font-size: 1.3rem;
+}
+
+button.btn {
+    border: none;
+    border-radius: 2rem;
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    font-family: var(--Livvic);
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-gray);
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/*
+================
+    Navbar
+================
+*/
+.nav {
+    background: white;
+    padding: 0 2rem;
+    height: 0;
+    min-height: 10.9vh;
+    overflow: hidden;
+    transition: height 1s ease-in-out;
+    align-items: center
+}
+
+.nav .nav-brand {
+    font-size: 1.6rem;
+}
+
+.nav-brand a {
+   font-size: 1.6rem;
+    padding: 1rem 0;
+    display: block;
+    font-family: var(--Lexend);
+    font-size: 1.6rem;
+}
+
+.nav .nav-menu {
+    justify-content: space-between;
+}
+
+.nav .toggle-collapse {
+    position: absolute;
+    top: 0%;
+    width: 90%;
+    cursor: pointer;
+    display: none;
+}
+
+.nav .toggle-collapse .toggle-icons {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.7rem 0;
+}
+
+.nav .toggle-collapse .toggle-icons i {
+    font-size: 1.4rem;
+    color: var(--text-gray);
+}
+
+.collapse {
+    height: 100vh;
+}
+
+.nav .nav-items {
+    display: flex;
+    list-style: none;
+    margin: 0;
+}
+
+.nav-items .nav-link {
+    padding: 1.6rem 1rem;
+    position: relative;
+    font-family: var(--Abel);
+    font-size: 1.1rem;
+}
+
+.nav-items .nav-link:hover {
+    background-color: var(----midnight);
+}
+
+.nav-link:hover a {
+    color: var(--white);
+}
+
+.nav .social{
+    padding: 1.6rem 0
+}
+
+.nav .social i{
+    padding: 0 .52rem;
+}
+
+.nav .social i:hover{
+    color: #a1c4cf;
+}
+
+
+/*
+========================
+   Main content site
+========================
+*/
+
+/*--------- Site title ---------*/
+main .site-title {
+    background-image: url("../assets/Background-image.png");
+    background-size: cover;
+    height: 110vh;
+    display: flex;
+    justify-content: center;
+}
+
+.site-title .site-background {
+    margin: 10rem;
+    text-align: center;
+    color: var(--white);
+}
+
+.site-title h1, h3 {
+    margin: .3rem;
+}
+
+.site-title .btn {
+    margin: 1.8rem;
+    background-image: var(--sky);
+}
+
+main button.btn:hover {
+    background: transparent;
+    border: 1px solid var(--white);
+    color: var(--white);
+}
+
+/*--------- Blog carousel ---------*/
+.blog {
+    background-image: url('../assets/Abract01.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 100vh;
+    width: 100%;
+
+}
+
+
+/*   Viewport less then or equal to 750px  */
+@media only screen  and (max-width: 750px) {
+    .nav .nav-menu,
+    .nav .nav-items {
+        flex-direction: column;
+    }
+
+    .nav .toggle-collapse {
+        display: block;
+    }
+}
+
+/* x  Viewport less then or equal to 750px x */
