@@ -7,5 +7,8 @@ $(document).ready(function () {
         $nav.toggleClass('collapse');
     });
 
+    // owl carousel for blog
+    $('owl-carousel').owlCarousel();
+
 
 });
